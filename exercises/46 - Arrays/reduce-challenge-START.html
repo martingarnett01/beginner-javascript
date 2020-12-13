@@ -9,9 +9,164 @@
 </head>
 
 <body>
+
+  <h1>Most used letters and numbers in my first blog post</h1>
+  <ol class="characterList"></ol>
   <script>
     // Grab all the text from a web page
     // Count how many times each letter and number occurs
+    const text = `
+    Martin Garnett's Logo
+    Home
+    About
+    Blog
+    Work
+    Scrapbook
+    Contact
+    Home / Blog /
+
+    Building my new website
+    Products
+    Posted on October 15, 2020
+    The obligatory first blog post about the "new website" in hope that this isn't the only blog I'll ever do. Let me take you through why I built my new website, how I built it, and what I learnt from making it.
+
+
+    It’s been a while now since I made my last website. Back in 2016, when I put that website up, I had the intention to one day convert the static HTML & CSS that I wrote into a WordPress theme so that I could start blogging. And… well… that never happened.
+
+    Until now!
+
+    Except, as always, I had to re-design it. I never did like my old logo – it’s quite hard to do a logo with the initials “MG”, especially without making it look like a car manufacturer of sorts. I also knew I wanted a site that I could grow, and the single-page site that I had made was just not flexible enough for me.
+
+    A screenshot of the top part to my last site, showing my pink hero banner, logo, and the top of my old portfolio.
+    👋 Farewell, pink single-page site with no blog!
+    Why?
+    So, why is blogging so important to me now? There’s two main reasons for this.
+
+    First and foremost, it’s a reminder. A letter to my future self. I’m constantly learning and finding out about new things, and as many of you know, nothing’s ever simple.
+
+    There are often times where I find myself trying to recall a particular material or technique that I once learnt. I frantically scour my bookmarks; nope. I scroll back to the year 2011 on my Twitter timeline; nope. I try and do my best at describing it in Google but give up on page 2 (yes, there’s more than one page to your search results).
+
+    I want my blog to be a home of learning and my own experiences. Not just for design and development (although heavily weighted for them), but I want to include things that other human beings may also get something out of.
+
+    The second reason why I wanted my own place to post my rambles, is because of exactly that – it’s my own. I vaguely remember an interesting tweet by @vanschneider who highlighted the fact that at any moment in time, a service could be taken down, along with all the content you may have curated on there. It would be completely out of your control, and there’s nothing you can do about it. Ironically, when I went searching for this tweet, it looks like he may have deleted it…
+
+    The Design
+    This is where most designers would probably post a load of wireframes and designs and colour explorations… well, I may disappoint you here.
+
+    I did start with some fun exploration in Figma to try and figure out roughly what I wanted. To begin with, the site was a very different colour scheme. I also used an assortment of random shapes to add interest. I quite liked these shapes (hence why I still have the shapes going on with the home page), and I feel like in some form they’ll make their way back into my current design.
+
+    A design mockup showing the home page in two parts (first half overlapping the second)
+    Initial design for the blog page that has category selector along the top and random shapes in the background.
+    As I was designing these initially, I was feeling quite confident with them, and so I took them to code!
+
+    More details about the actual coding is found below, however, to cut a long story short, there were things in this design that just didn’t feel very nice, and at certain breakpoints it was just looking too empty, or it just didn’t have that slightly more elegant, clean feel that I wanted.
+
+    Some pages worked better than others, and as time went on, I started to hate this design pretty quickly. So I went back to the start to figure out what I could do to make it feel more fresh, vibrant, and manageable.
+
+    This is where I switch to a design somewhere along the lines of what I have today – but this is also where I did things slightly different than when I’m working with more competent developers.
+
+    One thing that I learnt when starting to develop the previous design, is that there were things I was adding to the designs that I wasn’t sure if it was even possible to code. Spoiler alert: I built my site in WordPress, and you might have seen in my design above, I included an icon that represents the blog post. Buuuuut, WordPress, by default, doesn’t have an option to assign an icon to a category, and so it begins – my first dive down a rabbit hole.
+
+    So, for my next design, I merely created a ‘flavour’ of what I wanted to achieve, and then just began to code whatever I could learn. Adding features that I thought would be helpful to myself and for my audience.
+
+    At the time of writing this, the only design I have for my site is this:
+
+    A very simple, incomplete design that hints towards the site I have today.
+    I was so eager to jump into code, I didn’t even bother with placeholder images!
+    This is definitely not the approach I’d take under professional circumstances with clients involved. But in this scenario, I was the client, and so I signed off on this marvellous design.
+
+    There were some pros and cons to this approach…
+
+    Pros:
+    When coding, I didn’t get bogged down in little details that would require me to make HTML/CSS do things that it probably shouldn’t. This helped me keep the site more accessible and allowed me to get more of the site working sooner.
+    I was able to change code that ran throughout my whole site, across breakpoints; things like the responsive typography would have taken a long time to figure out in the design.
+    Cons
+    It was harder to imagine how something would work before writing all the code for it.
+    The design started to feel more limited by what I could achieve in code. If I wanted to do something that couldn’t be done out of the box, I generally put it into the “Later” category.
+    As you can see, I played a lot with having an image of myself on the homepage, but I later decided to keep this to my “About” page.
+
+    I actually also tried a self-portrait illustration. But I’m not really an illustrator so that looked naff.
+
+    I knew I wanted some kind of movement on the homepage, so I decided to bring back shapes again and do some experiments in code. Here’s my CodePen that I constructed my idea in:
+
+
+    I started with basic squares, but later moved to the shapes from my logo. I felt that this made it more in keeping with my brand.
+
+    The Development
+    As I’ve already hinted at, I decided to build my new website in WordPress. I did consider trying to learn a fancy new JavaScript framework like Gatsby, but without even first understanding the basic concepts of React, this proved to have a very steep learning curve when it came to customising it how I wanted it. The Gatsby docs are great for getting up and running quickly, but they lean heavily on pre-made styling libraries and frameworks.
+
+    WordPress was a good choice for me. I’m familiar with how the CMS works, and getting content onto the page from the CMS is actually very easy. I didn’t start from any templates (although, if I built another them for a client, I’d probably start with Underscores). The benefit of starting from scratch was that I actually understand everything that’s going on. There’s no bloat, and there’s no technical debt.
+
+    I also made it a bit of a goal to avoid as many plugins as I could. I believe most people’s tainted experiences of WordPress are because of their chosen theme and excessive use of plugins. I’ve seen it myself, and I’ve seen how quickly a site can be slowed down because of it. As I write this, my Lighthouse scores are generally above 90 which I’m pretty chuffed with.
+
+    Lighthouse scores for my site on local showing 92 Performance, 98 Accessibility, 93 Best Practices, and 91 SEO
+    I’m hoping to get these higher with a few quick wins in the near future. 🙂
+    So what plugins am I using?
+
+    Jetpack – This one is a must for any WordPress site, in my opinion. It gives you so many benefits just by toggling things on. I’ll be subscribing to this when I’m live to take advantage of the security benefits and video hosting.
+    FileBird – I just don’t understand how people with larger sites cope with the standard WordPress media browser. This beautifully integrated plugin lets you create folders and manage your media better. I purchased the pro version of this because it’s so damn useful.
+    Regenerate Thumbnails – Another plugin that should really just be a default WordPress feature. I use this as I change my layout in my theme. Without it, WordPress will keep the originally created resized images and they’d look blurry or be too big. It’s also useful when overwriting files you’ve previously uploaded.
+    And that’s all! For now at least. I may venture into getting YoastSEO if I feel like I want more traffic, but really, that’s not what this site is for.
+
+    I’m not the most experienced developer, however, I am enjoying learning. I’m pretty comfortable with a lot of HTML/CSS stuff, and I’m currently taking Wes Bos’ Beginner Javascript course which I’m thoroughly enjoying. I had to do quite a bit of research to build this site, after all, I haven’t really learnt any PHP and that’s what WordPress is built in. Fortunately, I could get by with adapting code snippets I’ve found on the official WordPress documentation, or from various tutorials around the web.
+
+    Along the way, I’ve found a few things that helped my development of this theme, here’s a couple that I would strongly recommend for anyone about to tackle their first theme:
+
+    Local by Flywheel – Probably the simplest way to get up and running with local WordPress development. I cannot fault this tool and it’s made life so much easier than faffing about with MAMP (or any version of). It’s a free tool with some pay-for upgrades. Personally, I find their entry-level pricing for the tool + hosting a little steep for non-businesses like myself. But it might be something I look into in the future.
+    WPGulp by Ahmad Awais – This is a great NPM package that helps integrate gulp processes and browsersync for WordPress development. It was super easy to set up and tweak for my liking and make working on the theme styles so much more pleasant.
+    WP Beginner – This site has some cracking tutorials that include simple versions for non-developers (theme/plugin solutions) as well as code snippets for those building their own themes.
+    Create Custom Gutenberg Blocks by Alessandro Castellani – This is a great tutorial series that I followed to make my own Gutenberg block! I’m not sure how much I’ll use my custom block (as CodePen embeds are pretty good), but I basically made a simple embed block for GitHub Gists.
+    Screenshots of the 3 step process to setup up a WordPress site with Local, and a fourth screenshot to show my site running in it.
+    Setting up a new WordPress site for local development is soooo easy with Local.
+    I may write some more blog posts in the future that go into detail about some of the post types, my file structure, etc. But I wanted to keep this post as a brief overview with some starting points for those considering a similar journey.
+
+    Closing Notes
+    It’s not uncommon for a designer to use a visual website building tool like Webflow or Semplice, to name a couple. Though, my experience with these, as someone who can get by with writing a bit of code, is that I get frustrated when I can’t achieve something that I could have written in code quite easily. I also wanted to own everything, and be able to move hosting provider should I come across any issues.
+
+    I’m hoping to continue adding helpful features to my website as I learn more and have more time to spend on it. But for now, I wanted to get my site out there so I could start blogging, sharing my work, and move onto a few other product ideas that I’ve been itching to start for a few months now.
+
+    A few features I’m hoping to add in the near future are:
+
+    Comments – if you have any questions for now, please reach out to me via my contact page or twitter!
+    Post contents side menu – some of my posts can be quite long, and users might want to just jump to a certain point. So I’m going to create a side menu that contains navigation to all my in-page headings.
+    Category menus on the blog – as I write more, you might only be interested in certain categories, so I want to make it easier to find the content you enjoy.
+    Links to RSS feeds – I’m on WordPress, so these links exist already, but I just want to make it easier for y’all to find the links and add them to your favourite RSS reader.
+    I hope you like my new site, and please do reach out to me if you have any questions or spot any issues.
+
+    You Rock! 🤘
+
+    Thanks for taking the time to check out my site. Let's be friends.
+
+    Download CV
+    Made with ♥ by me
+    `;
+
+    isValidCharacter = character => character.match(/[a-z0-9]/i);
+    toLowercase = character => character.toLowerCase();
+
+    function characterCounter (count, character) {
+      count[character] = count[character] + 1 || + 1;
+      return count;
+    }
+
+
+    const result = text
+      .split('')// Convert to Array
+      .filter(isValidCharacter) // Filter out any non-alphanumeric numbers
+      .map(toLowercase) // Convert to lowercase
+      .reduce(characterCounter, {}); // Count each instance by using reduce
+
+    const sortedResults = Object
+      .entries(result)
+      .sort((a, b) => b[1] - a[1]); // sorts from largest to smallest
+
+    const myList = document.querySelector('.characterList');
+
+    sortedResults.forEach (character => {
+      myList.insertAdjacentHTML("beforeend", `<li>${character[0]}: ${character[1]}</li>`);
+    });
+
+
 
 
   </script>

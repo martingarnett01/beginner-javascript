@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<title>The DOM</title>
+		<link rel="stylesheet" href="../../base.css" />
+	</head>
 
+<<<<<<< Updated upstream
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -21,5 +28,72 @@
     <p>Hi I'm a item</p>
   </div>
 </body>
+=======
+	<body>
+		<p class="martin">I am Martin, I <em>love</em> to <strong>code</strong>.</p>
+		<h1>Martin's Photo</h1>
+		<img class="nice cool" src="https://picsum.photos/600" />
+>>>>>>> Stashed changes
 
+		<hr />
+		<img
+			class="custom"
+			data-name="martin"
+			data-last="garnett"
+			src="https://picsum.photos/600"
+		/>
+		<img data-name="april" src="https://picsum.photos/600" />
+		<img data-name="rubix" src="https://picsum.photos/600" />
+
+		<hr />
+
+		<p class="wes">
+			I am Wes, I <em>love</em> to bbq and <strong>Make websites!</strong>
+		</p>
+
+		<div class="items">
+			<div class="item">
+				<img
+					class="custom"
+					data-last="bos"
+					data-name="wes"
+					src="https://picsum.photos/200"
+				/>
+				<img data-name="kait" src="https://picsum.photos/200" />
+				<img data-name="lux" src="https://picsum.photos/200" />
+
+				<p>Hi I'm a item</p>
+			</div>
+			<div class="item item2">
+				<img src="https://picsum.photos/200" />
+				<h2>
+					I am a heading
+					<span>I am hidden!</span>
+				</h2>
+				<p>Hi I'm a item</p>
+			</div>
+			<article class="item">
+				<h2>Im an article</h2>
+				<p class="pizza">This is how many pizzas I ate! 🍕</p>
+			</article>
+		</div>
+
+		<style>
+			h2 span {
+				display: none;
+			}
+
+			img {
+				transition: all 0.2s;
+			}
+
+			.round {
+				border-radius: 50%;
+				/* transform: rotate(1turn) scale(2); */
+				/* box-shadow: 0 0 10px black; */
+			}
+		</style>
+		<script src="./traversing-m.js"></script>
+		<!-- <script src="./traversing.js"></script> -->
+	</body>
 </html>

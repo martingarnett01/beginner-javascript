@@ -14,9 +14,11 @@
   <script>
     const toppings = ['Mushrooms ', 'Tomatoes', 'Eggs', 'Chili', 'Lettuce', 'Avocado', 'Chiles', 'Bacon', 'Pickles', 'Onions', 'Cheese'];
 
+    const orderTotals = [342, 1002, 523, 34, 634, 854, 1644, 2222];
+
     const students = [
       {
-        id: '11ce',
+        id: '565a',
         first_name: 'Dall',
         last_name: 'Puckring',
       },
@@ -102,7 +104,7 @@
       corn: 234,
     };
 
-    const orderTotals = [342, 1002, 523, 34, 634, 854, 1644, 2222];
+
 
     const feedback = [
       { comment: 'Love the burgs', rating: 4 },
@@ -128,6 +130,102 @@
     /*
       Looping Methods
     */
+
+    function logTopping (topping, index, originalArray) {
+      const prevTopping = originalArray[index-1];
+      const nextTopping = originalArray[index+1];
+      console.log(topping);
+
+      prevTopping ? console.log(prevTopping) : null;
+      nextTopping ? console.log(nextTopping) : console.log("Goodbye");;
+
+      console.log("-----");
+    }
+
+    toppings.forEach(logTopping);
+
+    console.clear();
+
+    // Map, Filter, Reduce
+
+    function addArms(face) {
+      return `👋 ${face} 👋`;
+    }
+
+    const toys = faces.map(addArms);
+
+    console.log(toys);
+
+    const orderTotalsWithTax = orderTotals.map(total => total * 1.25);
+
+    console.log(orderTotalsWithTax);
+
+    console.clear();
+
+    const cleanPeople = people.map( function(person) {
+      const birthday = new Date(person.birthday).getTime();
+      const now = Date.now();
+      const age = Math.floor((now - birthday) / 31536000000);
+
+      return {
+        age: age,
+        name: `${person.names.first} ${person.names.last}`
+      }
+
+    });
+
+    console.log(cleanPeople);
+
+    console.clear();
+
+    const over40 = cleanPeople.filter(person => person.age > 40);
+
+    console.table(cleanPeople);
+    console.table(over40);
+
+    // Find students
+
+    function findByProp (prop, value) {
+      return function isStudent (student) {
+        return student[prop] === value;
+      }
+    }
+
+    const student1 = students.find(findByProp('id', '565a'));
+
+    console.log(student1 ? student1 : "No student found");
+
+    console.clear();
+    // Reduce
+
+
+
+    function tallyNumbers (tally, currentOrderTotal) {
+      console.log(`The current tally is: ${tally}`);
+      console.log(`The current current order total is: ${currentOrderTotal}`);
+      console.log('-----');
+      return tally + currentOrderTotal;
+    }
+
+    const allOrders = orderTotals.reduce(tallyNumbers, 0);
+
+    console.log(allOrders);
+
+    function inventoryReducer(totals, item) {
+      console.log(`Looping over ${item.type}`);
+
+      totals[item.type] = totals[item.type] + 1 || 1;
+
+      return totals;
+    }
+
+    const inventoryCounts = inventory.reduce(inventoryReducer, {});
+
+    console.log(inventoryCounts);
+
+    const totalInventoryPrice = inventory.reduce((acc, item) => acc + item.price, 0);
+    console.log(totalInventoryPrice);
+
 
   </script>
 </body>
